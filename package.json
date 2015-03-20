@@ -4,7 +4,7 @@
   "description": "user simulation",
   "main": "index.js",
   "scripts": {
-    "test": "browserify test/*.js | testling"
+    "test": "browserify test/*.js | testling | coverify"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,18 @@
   "homepage": "https://github.com/bredele/user",
   "devDependencies": {
     "tape": "^3.5.0"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/9..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
   }
 }

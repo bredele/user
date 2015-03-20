@@ -6,6 +6,7 @@
 var test = require('tape');
 var user = require('..')();
 
+
 test('api', function(assert) {
 	assert.plan(3);
   assert.equal(typeof user.click, 'function');
@@ -23,4 +24,18 @@ test('click selector', function(assert) {
 		assert.pass('button clicked');
 	});
 	user.click('btn');
+});
+
+test('click position', function(assert) {
+	var btn = document.createElement('btn');
+	document.body.appendChild(btn);
+	var sizes = btn.getBoundingClientRect();
+	var x = sizes.left + 1;
+	var y = sizes.top + 1;
+
+	assert.plan(1);
+	btn.addEventListener('click', function() {
+		assert.pass('button clicked');
+	});
+	user.click(x, y);
 });
