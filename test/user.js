@@ -14,5 +14,13 @@ test('api', function(assert) {
 });
 
 test('click selector', function(assert) {
-	
+	var btn = document.createElement('btn');
+	btn.className = 'btn';
+	document.body.appendChild(btn);
+
+	assert.plan(1);
+	btn.addEventListener('click', function() {
+		assert.pass('button clicked');
+	});
+	user.click('btn');
 });
