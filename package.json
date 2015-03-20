@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/bredele/user/issues"
   },
-  "homepage": "https://github.com/bredele/user"
+  "homepage": "https://github.com/bredele/user",
+  "devDependencies": {
+    "tape": "^3.5.0"
+  }
 }
