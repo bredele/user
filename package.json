@@ -4,7 +4,7 @@
   "description": "user simulation",
   "main": "index.js",
   "scripts": {
-    "test": "node test/user.js"
+    "test": "browserify test/*.js | testling"
   },
   "repository": {
     "type": "git",
