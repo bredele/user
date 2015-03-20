@@ -4,13 +4,18 @@
  */
 
 module.exports = function() {
-  var that = this;
+
+  var that = {};
 
   that.click = function() {
 
   };
 
   that.press = function() {
+
+  };
+
+  that.type = function() {
 
   };
 
