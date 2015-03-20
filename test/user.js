@@ -21,21 +21,23 @@ test('click selector', function(assert) {
 
 	assert.plan(1);
 	btn.addEventListener('click', function() {
-		assert.pass('button clicked');
+		assert.pass('click from selector');
 	});
 	user.click('btn');
 });
 
 test('click position', function(assert) {
+	// note: should refactor button creation
 	var btn = document.createElement('btn');
+	btn.innerHTML = 'some text';
 	document.body.appendChild(btn);
 	var sizes = btn.getBoundingClientRect();
-	var x = sizes.left + 1;
-	var y = sizes.top + 1;
+	var x = sizes.left;
+	var y = sizes.top;
 
 	assert.plan(1);
 	btn.addEventListener('click', function() {
-		assert.pass('button clicked');
+		assert.pass('click from position');
 	});
 	user.click(x, y);
 });

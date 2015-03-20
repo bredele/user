@@ -1,6 +1,12 @@
 
 /**
- * Expose 'Mod'
+ * Simulate user actions.
+ *
+ * Examples:
+ *
+ *   var bob = user();
+ *
+ * @api public
  */
 
 module.exports = function() {
@@ -12,8 +18,8 @@ module.exports = function() {
    *
    * Examples:
    *
-   *   user.click('.btn');
-   *   user.click(300, 200);
+   *   bob.click('.btn');
+   *   bob.click(300, 200);
    *   
    * @param {String | Number} x
    * @param {Number} y
