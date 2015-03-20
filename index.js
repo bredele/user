@@ -9,6 +9,10 @@ module.exports = function() {
   that.click = function() {
 
   };
-  
+
+  that.press = function() {
+
+  };
+
   return that;
 };
